@@ -14,15 +14,7 @@ class App extends Component {
     console.log("constructor");
   }
 
-  url =
-    "https://cdn-images-1.medium.com/max/1600/1*u8hTumGAPQMYZIvfgQMfPA.jpeg";
-
-  componentWillMount() {
-    if (window.innerWidth < 500) {
-      this.setState({ innerWidth: window.innerWidth });
-    }
-    console.log("componentWillMount");
-  }
+  url = "https://image.ibb.co/j8CzEd/lifecycle.jpg";
 
   componentDidMount() {
     console.log("componentDidMount");
@@ -69,7 +61,11 @@ class App extends Component {
         <Child name={this.state.name} />
         <button onClick={this.changeState}>Change name</button>
         <button onClick={this.unmountChild}>unmountChild</button>
-        <img src={this.url} />
+        <img
+          alt="react lifecycle"
+          src={this.url}
+          style={{ width: 750 + "px" }}
+        />
       </div>
     );
   }

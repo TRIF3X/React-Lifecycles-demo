@@ -8,13 +8,6 @@ export default class Child extends Component {
     console.log("child constructor");
   }
 
-  componentWillMount() {
-    if (window.innerWidth < 500) {
-      this.setState({ innerWidth: window.innerWidth });
-    }
-    console.log("child componentWillMount");
-  }
-
   componentDidMount() {
     console.log("child componentDidMount");
   }
